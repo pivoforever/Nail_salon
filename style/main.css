@@ -212,8 +212,8 @@ nav {
     white-space: nowrap;
     max-width: 1312px;
     min-height: 339px;
-    margin: 0 auto;
-    background: rgb(253, 141, 101);
+    margin: 0 auto 190px;
+    background: rgb(252, 199, 159);
 }
 .our_works_items a {
     display: inline-block;
@@ -228,4 +228,36 @@ nav {
 .carousel {
     -ms-overflow-style: none; /* Скрываем скроллбар в IE/Edge */
     scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+}
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.comments {
+    display: flex;
+    flex-direction: column;
+    max-width: 1313px;
+    min-height: 320px;
+    margin: 0 auto 36px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 20px;
+}
+.comments p {
+    margin-bottom: 40px;
+    background: rgb(216, 229, 147);
+    border-radius: 5px;
+}
+.rev-button {
+    display: flex;
+    width: 1313px;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+.reviews .button{
+    background: white;
+    width: 308px;
+    height: 49px;
+    border: 3px solid rgb(124, 179, 68);
 }
