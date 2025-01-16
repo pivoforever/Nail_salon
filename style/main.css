@@ -117,8 +117,7 @@ nav {
     align-content: flex-start;
     justify-content: space-between;
     margin: 0 auto;
-    margin-bottom: 120
-    px;
+    margin-bottom: 120px;
 }
 .about-left {
     display: flex;
@@ -134,7 +133,7 @@ nav {
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.07px;
-    margin-bottom: 20px;
+    margin-bottom: 31px;
 }
 .about-right {
     display: flex;
@@ -161,7 +160,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     max-width: 1308px;
-    margin: 0 auto;
+    margin: 0 auto 177px;
     gap: 23px;
     justify-content: center;
     align-items: center;
@@ -204,4 +203,29 @@ nav {
 }
 .price-item8 {
     background: url(../img/pr8.png);
+}
+.our_works h2 {
+    margin-left: 344px;
+}
+.carousel {
+    overflow-x: scroll;
+    white-space: nowrap;
+    max-width: 1312px;
+    min-height: 339px;
+    margin: 0 auto;
+    background: rgb(253, 141, 101);
+}
+.our_works_items a {
+    display: inline-block;
+    margin: 30px 20px;
+    height: 283px; /* Высота изображений */
+    object-fit: cover;
+    border-radius: 3px;
+}
+::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбар в Chrome/Safari */
+}
+.carousel {
+    -ms-overflow-style: none; /* Скрываем скроллбар в IE/Edge */
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
 }
