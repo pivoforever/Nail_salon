@@ -265,6 +265,7 @@ nav {
     border: 3px solid rgb(124, 179, 68);
 }
 .our_studio {
+    margin-bottom: 193px;
 }
 .our_studio_box {
     display: flex;
@@ -299,4 +300,37 @@ nav {
 }
 .our_studio_imgs img {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+footer img:nth-child(3) {
+    padding-right: 56px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+}
+.contacts p:nth-child(1) {
+    font-size: 64px;
+}
+.contacts p:nth-child(2) {
+    font-size: 24px;
+}
+.contacts p:nth-child(4) {
+    font-size: 24px;
+}
+.social-icons {
+}
+.bi {
+}
+.bi-facebook {
+}
+.bi-twitter {
+}
+.bi-instagram {
+}
+.bi-whatsapp {
 }
