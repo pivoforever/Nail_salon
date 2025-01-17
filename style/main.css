@@ -22,6 +22,8 @@ a {
 }
 h2 {
     font-size: 40px;
+    font-weight: normal;
+    margin: 0;
 }
 a:hover {
     transform: scale(1.1);
@@ -122,12 +124,12 @@ nav {
 .about-left {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 48px;
     margin-left: 55px;
     width: 715px;
 }
 .about-left h2 {
-    margin-bottom: 53px;
+    margin-bottom: 54px;
 }
 .about-left p {
     font-size: 24px;
@@ -206,6 +208,7 @@ nav {
 }
 .our_works h2 {
     margin-left: 344px;
+    margin-bottom: 31px;
 }
 .carousel {
     overflow-x: scroll;
@@ -252,7 +255,7 @@ nav {
 .rev-button {
     display: flex;
     width: 1313px;
-    margin: 0 auto;
+    margin: 0 auto 146px;
     justify-content: flex-end;
 }
 .reviews .button{
@@ -260,4 +263,40 @@ nav {
     width: 308px;
     height: 49px;
     border: 3px solid rgb(124, 179, 68);
+}
+.our_studio {
+}
+.our_studio_box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 50px;
+    background: rgb(124, 179, 68);
+    max-width: 1137px;
+    min-height: 618px;
+    padding-left: 95px;
+    padding-top: 57px;
+}
+.our_studio_box h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+.our_studio_box p {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 21px;
+}
+.our_studio_box .button {
+    background: white;
+    width: 233px;
+    height: 49px;
+    border: 3px solid rgb(124, 179, 68);
+    margin-bottom: 44px;
+}
+.our_studio_imgs {
+    display: flex;
+    gap: 37px;
+}
+.our_studio_imgs img {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
