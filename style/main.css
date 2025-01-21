@@ -402,14 +402,27 @@ footer img:nth-child(3) {
     }
     
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
     .our_studio_imgs img {
         width: 171px;
         height: 144px;
     }
     header {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
+    .banner-left {
+        margin-top: 0;
+    }
+    .banner-left p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .banner-left a {
+        width: 149px;
+        height: 42px;
+        font-size: 16px;
+    }
+
     .item {
         display: flex;
         font-size: 20px;
@@ -434,12 +447,12 @@ footer img:nth-child(3) {
     }
     .name {
         font-size: 150px;
-        line-height: 160px;
+        line-height: 110px;
     }
 
 }
 @media screen and (max-width: 750px) {
-    .bunner-right img {
+    .banner-right img {
         width: 174px;
         height: 161px;
     }
