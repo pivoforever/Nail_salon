@@ -71,11 +71,26 @@ nav {
 }
 .item4 {
     width: 145px;
+    margin-right: 170px;
 }
-.item5 {
+/* .item5 {
     width: 197px;
     height: 68px;
     background: rgb(216, 229, 147);
+} */
+.item5.button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgb(216, 229, 147);
+    width: 197px;
+    height: 68px;
+}
+
+.item5.button:hover {
+    transform: scale(1.1);
+    background: rgb(200, 215, 130);
 }
 .banner {
     margin-bottom: 294px;
@@ -455,5 +470,16 @@ footer img:nth-child(3) {
     .banner-right img {
         width: 174px;
         height: 161px;
+    }
+    .contacts p:nth-child(1) {
+        font-size: 35px;
+        /* margin-bottom: 27px; */
+    }
+    .item5.button {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
     }
 }
