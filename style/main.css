@@ -388,8 +388,8 @@ footer img:nth-child(3) {
     margin: 10% auto; /* Центрирование по вертикали */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ширина окна */
-    max-width: 500px; /* Максимальная ширина */
+    max-width: 844px; /* Максимальная ширина */
+    min-height: 1036px;
     border-radius: 10px; /* Скругленные углы */
     position: relative;
 }
