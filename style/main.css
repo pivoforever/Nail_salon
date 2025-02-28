@@ -369,6 +369,70 @@ footer img:nth-child(3) {
 .social-icons i:hover {
     color: #007bff;
 }
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте при прокрутке */
+    z-index: 1000; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Прокрутка, если содержимое не помещается */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Центрирование по вертикали */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина окна */
+    max-width: 500px; /* Максимальная ширина */
+    border-radius: 10px; /* Скругленные углы */
+    position: relative;
+}
+
+/* Кнопка закрытия */
+#closeModalBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#closeModalBtn:hover {
+    color: #f00; /* Красный цвет при наведении */
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
 @media screen and (max-width: 1920px) {
 
 }

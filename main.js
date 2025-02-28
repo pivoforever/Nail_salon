@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelector(".carousel");
     const itemWidth = items.querySelector("a").offsetWidth+40; // Ширина одного элемента
-    console.log(`Ширина элемента: ${itemWidth}`);
-    console.log(items.scrollLeft);
-    console.log(items.scrollWidth);
-    console.log(items.clientWidth);
 
     let scrollInterval;
 
@@ -36,6 +32,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Запустить автоматическую прокрутку при загрузке страницы
     startAutoScroll();
-    console.log("Скрипт запустился");
     
+        // Получаем элементы
+    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("openModalBtn");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    // Открытие модального окна
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+
+    // Закрытие модального окна
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Закрытие модального окна при клике вне его области
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });
