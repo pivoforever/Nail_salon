@@ -236,8 +236,10 @@ nav {
     min-height: 339px;
     margin: 0 auto 190px;
     background: rgb(252, 199, 159);
+    position: relative;
+    transition: transform 0.5s ease; /* Плавная анимация прокрутки */
 }
-.our_works_items a {
+.carousel a {
     display: inline-block;
     margin: 30px 20px;
     height: 283px; /* Высота изображений */
