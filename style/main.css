@@ -45,6 +45,24 @@ a:hover {
 header {
     margin-bottom: 228px;
     border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white; /* Начальный цвет */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Класс для изменения цвета при скролле */
+header.scrolled {
+    background-color: rgb(216, 229, 147); /* Светло-зеленый цвет */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для выделения */
+}
+
+/* Добавьте отступ для контента, чтобы он не скрывался под фиксированным меню */
+main {
+    padding-top: 116px; /* Высота хедера */
 }
 .header_block {
     display: flex;
@@ -73,16 +91,12 @@ nav {
     width: 145px;
     margin-right: 170px;
 }
-/* .item5 {
+.item5 {
     width: 197px;
     height: 68px;
     background: rgb(216, 229, 147);
-} */
+}
 .item5.button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
     background: rgb(216, 229, 147);
     width: 197px;
     height: 68px;
@@ -91,6 +105,10 @@ nav {
 .item5.button:hover {
     transform: scale(1.1);
     background: rgb(200, 215, 130);
+}
+/* При скролле можно изменить цвет кнопки для контраста */
+header.scrolled .item5.button {
+    background: white; /* Меняем на белый, когда хедер становится зеленым */
 }
 .banner {
     margin-bottom: 294px;
