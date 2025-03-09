@@ -43,7 +43,7 @@ a:hover {
     margin: 0 auto;
 }
 header {
-    margin-bottom: 228px;
+    /* margin-bottom: 228px; */
     border-bottom: 1px solid black;
     position: fixed;
     width: 100%;
@@ -112,6 +112,7 @@ header.scrolled .item5.button {
 }
 .banner {
     margin-bottom: 294px;
+    margin-top: 224px;
 }
 .banner_block {
     display: flex;
@@ -171,6 +172,9 @@ header.scrolled .item5.button {
     line-height: 29px;
     letter-spacing: 0.07px;
     margin-bottom: 31px;
+}
+.about-left dl{
+    font-size: 20px;
 }
 .about-right {
     display: flex;
