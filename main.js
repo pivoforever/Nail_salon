@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let scrollInterval;
     const header = document.querySelector("header");
+
+    const menuIcon = document.getElementById("menuIcon");
+    const menu = document.getElementById("item");
     // Базовая конфигурация
     ScrollReveal({
         reset: false, // Элементы анимируются только один раз
@@ -89,6 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("click", (event) => {
         if (event.target === modal) {
             modal.style.display = "none";
+        }
+    });
+    menuIcon.addEventListener("click", () => {
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
         }
     });
 });

@@ -53,7 +53,11 @@ header {
     background-color: white; /* Начальный цвет */
     transition: background-color 0.3s ease; /* Плавный переход цвета */
 }
-
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Скрываем на десктопе */
+}
 /* Класс для изменения цвета при скролле */
 header.scrolled {
     background-color: rgb(219, 232, 188); /* Светло-зеленый цвет */
@@ -74,6 +78,7 @@ main {
 }
 nav {
     display: flex;
+    flex-direction: row;
     font-size: 24px;
     align-items: center;
     gap: 22px;
@@ -512,8 +517,15 @@ form button:hover {
     }
     
 }
-/* @media screen and (max-width: 1080px) {
-    .our_studio_imgs img {
+@media screen and (max-width: 1080px) {
+    .menu-icon {
+        display: block; /* Показываем иконку на мобильных устройствах */
+    }
+    .item {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+    }
+    /* .our_studio_imgs img {
         width: 171px;
         height: 144px;
     }
@@ -531,15 +543,12 @@ form button:hover {
         width: 149px;
         height: 42px;
         font-size: 16px;
-    }
+    }*/
 
     .item {
-        display: flex;
-        font-size: 20px;
-        align-items: center;
-        gap: 10;
+        flex-direction: column;
     }
-    .item1 {
+    /*.item1 {
         width: 71px;
     }
     .item2 {
@@ -560,7 +569,7 @@ form button:hover {
         line-height: 110px;
     }
 
-} */
+}
 @media screen and (max-width: 380px) {
     .banner-right img {
         width: 174px;
@@ -568,7 +577,6 @@ form button:hover {
     }
     .contacts p:nth-child(1) {
         font-size: 35px;
-        /* margin-bottom: 27px; */
     }
     .item5.button {
         width: 120px;
@@ -576,5 +584,5 @@ form button:hover {
         font-size: 20px;
         top: 10px;
         right: 10px;
-    }
+    } */
 }
