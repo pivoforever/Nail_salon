@@ -512,7 +512,7 @@ form button:hover {
     }
     
 }
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
     .our_studio_imgs img {
         width: 171px;
         height: 144px;
@@ -560,8 +560,8 @@ form button:hover {
         line-height: 110px;
     }
 
-}
-@media screen and (max-width: 750px) {
+} */
+@media screen and (max-width: 380px) {
     .banner-right img {
         width: 174px;
         height: 161px;
