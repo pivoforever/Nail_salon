@@ -421,10 +421,12 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 25px;
 }
 
 form label {
     font-weight: bold;
+    font-size: 24px;
 }
 
 form input, form select, form button {
