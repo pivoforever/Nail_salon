@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.child {
+    background-color: lightblue;
+    padding: 10px;
+    /* text-align: center; */
+}
