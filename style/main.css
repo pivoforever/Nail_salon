@@ -4,16 +4,15 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-body {
+* {
     margin: 0;
+    padding: 0;
+}
+body {
     font-family: "Poiret One", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
-    color: rgb(0, 0, 0);
-}
-p {
-    margin: 0;
 }
 a {
     text-decoration: none;
@@ -23,8 +22,6 @@ a {
 }
 h2 {
     font-size: 40px;
-    font-weight: normal;
-    margin: 0;
 }
 a:hover {
     transform: scale(1.1);
@@ -43,7 +40,6 @@ a:hover {
     margin: 0 auto;
 }
 header {
-    /* margin-bottom: 228px; */
     border-bottom: 1px solid black;
     position: fixed;
     width: 100%;
@@ -158,8 +154,12 @@ header.scrolled .item5 {
     margin-bottom: 31px;
 }
 .about-left dl{
-    font-size: 20px;
+    font-size: 24px;
 }
+.about-left dd{
+    padding-left: 5%;
+}
+
 .about-right {
     display: flex;
     flex-direction: column;

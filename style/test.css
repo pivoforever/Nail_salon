@@ -7,7 +7,9 @@ html {
 
 .parent {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
     width: 100%;
     border: 1px solid black;
     padding: 20px;
@@ -17,5 +19,5 @@ html {
 .child {
     background-color: lightblue;
     padding: 10px;
-    /* text-align: center; */
+    width: 40%;
 }
