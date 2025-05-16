@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style/main.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="header_block">
-        <div class="logo">
-          <img src="img/logo_small.svg" alt="logo-small" />
-        </div>
-        <nav class="item">
-          <a href="#about_as" class="item1">О нас</a>
-          <a href="#price" class="item2">Прайс</a>
-          <a href="#reviews" class="item3">Отзывы</a>
-          <a href="#our_studio" class="item4">Контакты</a>
-          <a href="#" class="item5 button">Записаться</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <?php get_header(); ?>
   <main>
     <!-- Баннер -->
     <div class="banner">
@@ -152,36 +121,4 @@
       </div>
     </div>
   </main>
-  <footer>
-    <div class="container">
-      <div class="footer_block">
-        <img src="img/logo_turn.svg" alt="">
-        <div class="contacts">
-          <p>+7 (917)418-75-95</p>
-          <p>единый номер телефона</p>
-          <p>каждый день с 10:00 до 22:00</p>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/yourprofile/" target="_blank">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="https://twitter.com/yourprofile" target="_blank">
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/yourprofile/" target="_blank">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://wa.me/yourphonenumber" target="_blank">
-              <i class="bi bi-whatsapp"></i>
-            </a>
-          </div>
-          <p>© Студия Avocado, г. Уфа</p>
-          <p> Пр. Октября, 88</p>
-        </div>
-        <img src="img/logo_big.svg" alt="">
-      </div>
-    </div>
-  </footer>
-  </div>
-</body>
-
-</html>
+  <?php get_footer(); ?>
