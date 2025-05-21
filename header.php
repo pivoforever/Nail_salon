@@ -14,17 +14,18 @@
 </head>
 <body>
   <header>
-    <div class="container">
+  <div class="container">
       <div class="header_block">
         <div class="logo">
           <img src="img/logo_small.svg" alt="logo-small" />
         </div>
-        <nav class="item">
+        <div class="menu-icon" id="menuIcon"><h1>☰ Это бургер!!!</h1></div>
+        <nav class="item" id="item">
           <a href="#about_as" class="item1">О нас</a>
           <a href="#price" class="item2">Прайс</a>
           <a href="#reviews" class="item3">Отзывы</a>
           <a href="#our_studio" class="item4">Контакты</a>
-          <a href="#" class="item5 button">Записаться</a>
+          <a href="#" id="openModalBtn" class="button item5">Записаться</a>
         </nav>
       </div>
     </div>

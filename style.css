@@ -1,22 +1,18 @@
-/*
-Theme Name: Nail Studio
-*/
-
 html {
     box-sizing: border-box;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
-body {
+* {
     margin: 0;
+    padding: 0;
+}
+body {
     font-family: "Poiret One", serif;
     font-weight: 400;
     font-style: normal;
-    color: rgb(0, 0, 0);
-}
-p {
-    margin: 0;
+    font-size: 24px;
 }
 a {
     text-decoration: none;
@@ -26,8 +22,6 @@ a {
 }
 h2 {
     font-size: 40px;
-    font-weight: normal;
-    margin: 0;
 }
 a:hover {
     transform: scale(1.1);
@@ -36,7 +30,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
     border-radius: 50px;
     transition: 0.5s ease;
 }
@@ -47,8 +40,28 @@ a:hover {
     margin: 0 auto;
 }
 header {
-    margin-bottom: 228px;
     border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white; /* Начальный цвет */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Скрываем на десктопе */
+}
+/* Класс для изменения цвета при скролле */
+header.scrolled {
+    background-color: rgb(219, 232, 188); /* Светло-зеленый цвет */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для выделения */
+}
+
+/* Добавьте отступ для контента, чтобы он не скрывался под фиксированным меню */
+main {
+    padding-top: 116px; /* Высота хедера */
 }
 .header_block {
     display: flex;
@@ -60,29 +73,27 @@ header {
 }
 nav {
     display: flex;
-    font-size: 24px;
+    flex-direction: row;
     align-items: center;
     gap: 22px;
 }
-.item1 {
-    width: 83px;
-}
-.item2 {
-    width: 117px;
-}
-.item3 {
-    width: 118px;
-}
-.item4 {
-    width: 145px;
-}
 .item5 {
+    background: rgb(216, 229, 147);
     width: 197px;
     height: 68px;
-    background: rgb(216, 229, 147);
+}
+
+.item5:hover {
+    transform: scale(1.1);
+    background: rgb(200, 215, 130);
+}
+/* При скролле можно изменить цвет кнопки для контраста */
+header.scrolled .item5 {
+    background: white; /* Меняем на белый, когда хедер становится зеленым */
 }
 .banner {
     margin-bottom: 294px;
+    margin-top: 224px;
 }
 .banner_block {
     display: flex;
@@ -138,11 +149,17 @@ nav {
     margin-bottom: 54px;
 }
 .about-left p {
-    font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.07px;
     margin-bottom: 31px;
 }
+.about-left dl{
+    font-size: 24px;
+}
+.about-left dd{
+    padding-left: 5%;
+}
+
 .about-right {
     display: flex;
     flex-direction: column;
@@ -225,8 +242,10 @@ nav {
     min-height: 339px;
     margin: 0 auto 190px;
     background: rgb(252, 199, 159);
+    position: relative;
+    transition: transform 0.5s ease; /* Плавная анимация прокрутки */
 }
-.our_works_items a {
+.carousel a {
     display: inline-block;
     margin: 30px 20px;
     height: 283px; /* Высота изображений */
@@ -261,7 +280,6 @@ nav {
     height: 320px;
     border: 1px solid black;
     border-radius: 10px;
-    font-size: 24px;
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -296,7 +314,6 @@ nav {
     margin-bottom: 15px;
 }
 .our_studio_box p {
-    font-size: 24px;
     margin-bottom: 21px;
 }
 .our_studio_box a {
@@ -334,9 +351,6 @@ footer img:nth-child(3) {
     align-items: center;
     margin-top: 70px;
 }
-.contacts p {
-    font-size: 24px;
-}
 .contacts p:nth-child(1) {
     font-size: 64px;
 
@@ -356,26 +370,115 @@ footer img:nth-child(3) {
 .social-icons i:hover {
     color: #007bff;
 }
-@media screen and (max-width: 1920px) {
-
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте при прокрутке */
+    z-index: 1000; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Прокрутка, если содержимое не помещается */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
 }
-@media screen and (max-width: 1600px) {
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Центрирование по вертикали */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 844px; /* Максимальная ширина */
+    min-height: 1036px;
+    border-radius: 10px; /* Скругленные углы */
+    position: relative;
+}
+
+/* Кнопка закрытия */
+#closeModalBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#closeModalBtn:hover {
+    color: #f00; /* Красный цвет при наведении */
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+/* @media screen and (max-width: 1600px) {
     footer img:nth-child(1) {
         margin-right: 0;
     }
     footer img:nth-child(3) {
         margin-right: 0;
     }
-
-}
+} */
 @media screen and (max-width: 1350px) {
     .header_block {
-        padding: 0 50px 0 50px;
+        margin: 0 20px;
+        padding: 0;
+        min-height: 230px;
     }
-    
+    .logo img{
+        width: 170px;
+        height: auto; /* Сохраняет пропорции */
+        margin-left: 80px;
+    }
+    .item {
+        margin-right: 80px;
+        font-size: 40px;
+        gap: 26px;
+    }
+    .item5 {
+        width: 250px;
+        font-size: 40px;
+    }
+    main {
+        padding-top: 360px; /* Высота хедера */
+    }
     .banner_block {
         flex-direction: column;
         align-items: center;
+    }
+    .name {
+        font-size: 300px;
+        line-height: 160px;
+    }
+    .banner-left p{
+        font-size: 47px;
+    }
+    .banner-left a{
+        font-size: 40px;
+        width: 300px;
     }
     .banner-right{
         order: -1;
@@ -407,7 +510,14 @@ footer img:nth-child(3) {
     
 }
 @media screen and (max-width: 1080px) {
-    .our_studio_imgs img {
+    .menu-icon {
+        display: block; /* Показываем иконку на мобильных устройствах */
+    }
+    .item {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+    }
+    /* .our_studio_imgs img {
         width: 171px;
         height: 144px;
     }
@@ -425,15 +535,12 @@ footer img:nth-child(3) {
         width: 149px;
         height: 42px;
         font-size: 16px;
-    }
+    }*/
 
     .item {
-        display: flex;
-        font-size: 20px;
-        align-items: center;
-        gap: 10;
+        flex-direction: column;
     }
-    .item1 {
+    /*.item1 {
         width: 71px;
     }
     .item2 {
@@ -455,9 +562,19 @@ footer img:nth-child(3) {
     }
 
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 380px) {
     .banner-right img {
         width: 174px;
         height: 161px;
     }
+    .contacts p:nth-child(1) {
+        font-size: 35px;
+    }
+    .item5.button {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    } */
 }
